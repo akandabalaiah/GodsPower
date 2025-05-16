@@ -1,11 +1,13 @@
+import os
 from flask import Flask, render_template, request, redirect
 import sqlite3
 
 app = Flask(__name__)
 
-# Initialize database
+DB_PATH = os.path.join(os.path.dirname(__file__), 'users.db')
+
 def init_db():
-    conn = sqlite3.connect('users.db')
+    conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
     c.execute('''
         CREATE TABLE IF NOT EXISTS users (
@@ -18,6 +20,7 @@ def init_db():
     conn.close()
 
 init_db()
+
 
 @app.route('/')
 def index():
