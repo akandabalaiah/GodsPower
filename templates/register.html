@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="God's Power Gym Registration Page" />
+    <meta
+      name="keywords"
+      content="gym, fitness, workout, registration, Hyderabad"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Register | God's Power - Health Club & Fitness Center</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ url_for('static', filename='img/god\'s_power_bg.png') }}"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Css Styles -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/font-awesome.min.css') }}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/flaticon.css') }}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/owl.carousel.min.css') }}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/barfiller.css') }}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/magnific-popup.css') }}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/slicknav.min.css') }}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Section Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+      <div class="canvas-close">
+        <i class="fa fa-close"></i>
+      </div>
+      <div class="canvas-search search-switch">
+        <i class="fa fa-search"></i>
+      </div>
+      <nav class="canvas-menu mobile-menu">
+        <ul>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+          <li><a href="{{ url_for('services') }}">Services</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact</a></li>
+          <li class="active">
+            <a href="{{ url_for('register') }}">Register</a>
+          </li>
+        </ul>
+      </nav>
+      <div id="mobile-menu-wrap"></div>
+      <div class="canvas-social">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-youtube-play"></i></a>
+        <a href="https://www.instagram.com/godspower_gym/p/DFafEjQSifY/">
+          <i class="fa fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+    <!-- Offcanvas Menu Section End -->
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="logo">
+              <a href="{{ url_for('index') }}">
+                <img
+                  src="{{ url_for('static', filename='img/god\'s_power_bg.png') }}"
+                  alt="God's Power Gym Logo"
+                  style="height: 200px; width: auto"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <nav class="nav-menu">
+              <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li class="active">
+                  <a href="{{ url_for('register') }}">Register</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-lg-3">
+            <div class="top-option">
+              <div class="to-search search-switch">
+                <i class="fa fa-search"></i>
+              </div>
+              <div class="to-social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                <a
+                  href="https://www.instagram.com/godspower_gym/p/DFafEjQSifY/"
+                >
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="canvas-open">
+          <i class="fa fa-bars"></i>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section
+      class="breadcrumb-section set-bg"
+      data-setbg="{{ url_for('static', filename='img/breadcrumb-bg.jpg') }}"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="breadcrumb-text">
+              <h2>Register</h2>
+              <div class="bt-option">
+                <a href="{{ url_for('index') }}">Home</a>
+                <span>Register</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Registration Section Begin -->
+    <section class="contact-section spad">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="section-title contact-title">
+              <span>REGISTER</span>
+              <h2>Start Your Fitness Journey</h2>
+            </div>
+            <div class="contact-widget">
+              <div class="cw-text">
+                <i class="fa fa-map-marker"></i>
+                <p>
+                  Shop No.11-3, CGF6+QXP, 292/6, A.N Colony, Srinivasa Nagar,
+                  Padmarao Nagar, Secunderabad, Telangana 500061
+                </p>
+              </div>
+              <div class="cw-text">
+                <i class="fa fa-mobile"></i>
+                <ul>
+                  <li>+91-9700317444</li>
+                </ul>
+              </div>
+              <div class="cw-text email">
+                <i class="fa fa-envelope"></i>
+                <p>Support.gymcenter@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="leave-comment">
+              <form
+                method="post"
+                action="{{ url_for('register') }}"
+                id="registrationForm"
+              >
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="fullname"
+                    placeholder="Full Name"
+                    required
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number"
+                    required
+                    class="form-control"
+                    pattern="[0-9]{10}"
+                    title="Please enter a 10-digit phone number"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Password"
+                    required
+                    class="form-control"
+                    minlength="8"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    name="confirm_password"
+                    placeholder="Confirm Password"
+                    required
+                    class="form-control"
+                    oninput="checkPasswordMatch()"
+                  />
+                  <small
+                    id="passwordMatchMessage"
+                    class="form-text text-muted"
+                  ></small>
+                </div>
+                <div class="form-group">
+                  <select name="membership_type" class="form-control" required>
+                    <option value="" disabled selected>
+                      Select Membership Type
+                    </option>
+                    <option value="1_month">1 Month (₹600)</option>
+                    <option value="6_months">6 Months (₹3600)</option>
+                    <option value="12_months">12 Months (₹7200)</option>
+                  </select>
+                </div>
+                <button type="submit" class="primary-btn btn-block">
+                  Register Now
+                </button>
+                <p class="text-center mt-3">
+                  Already have an account?
+                  <a href="{{ url_for('login') }}">Login here</a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Registration Section End -->
+
+    <!-- Membership Benefits Section Begin -->
+    <section class="pricing-section spad">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title">
+              <span>Why Join Us?</span>
+              <h2>Membership Benefits</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="benefit-item">
+              <i class="fa fa-dumbbell"></i>
+              <h4>Modern Equipment</h4>
+              <p>
+                Access to latest fitness equipment for all your workout needs
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="benefit-item">
+              <i class="fa fa-users"></i>
+              <h4>Expert Trainers</h4>
+              <p>Guidance from certified fitness professionals</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="benefit-item">
+              <i class="fa fa-calendar-alt"></i>
+              <h4>Flexible Hours</h4>
+              <p>Open from 5AM to 11PM to fit your schedule</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Membership Benefits Section End -->
+
+    <!-- Footer Section Begin -->
+    <section class="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="fs-about">
+              <div class="fa-logo">
+                <a href="{{ url_for('index') }}">
+                  <img
+                    src="{{ url_for('static', filename='img/god\'s_power_bg.png') }}"
+                    alt="God's Power Gym Logo"
+                    style="height: 200px; width: auto"
+                  />
+                </a>
+              </div>
+              <p>
+                God's Power Gym provides top-notch fitness facilities with
+                professional trainers to help you achieve your health and
+                fitness goals in Secunderabad.
+              </p>
+              <div class="fa-social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                <a
+                  href="https://www.instagram.com/godspower_gym/p/DFafEjQSifY/"
+                >
+                  <i class="fa fa-instagram"></i>
+                </a>
+                <a href="#"><i class="fa fa-envelope-o"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-6">
+            <div class="fs-widget">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-6">
+            <div class="fs-widget">
+              <h4>Support</h4>
+              <ul>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
+                <li><a href="{{ url_for('contact') }}">Help Center</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="fs-widget">
+              <h4>Opening Hours</h4>
+              <div class="opening-time">
+                <p>Monday - Saturday: 5:00 AM - 10:00 AM</p>
+                <p>Sunday: 5:30 AM - 10:00 AM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="copyright-text">
+              <p>
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                God's Power Gym. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section End -->
+
+    <!-- Search model Begin -->
+    <div class="search-model">
+      <div class="h-100 d-flex align-items-center justify-content-center">
+        <div class="search-close-switch">+</div>
+        <form class="search-model-form">
+          <input type="text" id="search-input" placeholder="Search here....." />
+        </form>
+      </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/masonry.pkgd.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.barfiller.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.slicknav.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <!-- Custom Registration Form Validation -->
+    <script>
+      function checkPasswordMatch() {
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.querySelector(
+          "input[name='confirm_password']"
+        ).value;
+        const message = document.getElementById("passwordMatchMessage");
+
+        if (password !== confirmPassword) {
+          message.textContent = "Passwords do not match!";
+          message.style.color = "red";
+        } else {
+          message.textContent = "Passwords match!";
+          message.style.color = "green";
+        }
+      }
+
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (event) {
+          const password = document.getElementById("password").value;
+          const confirmPassword = document.querySelector(
+            "input[name='confirm_password']"
+          ).value;
+
+          if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            event.preventDefault();
+          }
+        });
+    </script>
+  </body>
+</html>

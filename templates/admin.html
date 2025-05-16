@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin - Registered Users</title>
+  </head>
+  <body>
+    <h2>Registered Users</h2>
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Password</th>
+      </tr>
+      {% for user in users %}
+      <tr>
+        <td>{{ user[0] }}</td>
+        <td>{{ user[1] }}</td>
+        <td>{{ user[2] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <br />
+    <a href="/">← Back to Home</a>
+  </body>
+</html>
