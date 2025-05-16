@@ -21,7 +21,6 @@ def init_db():
 
 init_db()
 
-
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -50,15 +49,13 @@ def user_info():
 def login():
     return render_template('login.html')
 
-
-
 # Registration Submission (check existing or insert new)
 @app.route('/submit-registration', methods=['POST'])
 def submit_registration():
     username = request.form['username']
     password = request.form['password']
 
-    conn = sqlite3.connect('users.db')
+    conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
 
     c.execute('SELECT * FROM users WHERE username = ?', (username,))
@@ -82,11 +79,10 @@ def submit_registration():
 def thankyou():
     return "<h2>Registration Successful!</h2><a href='/'>Go back</a>"
 
-
 # Admin Page to view all users
 @app.route('/admin')
 def admin():
-    conn = sqlite3.connect('users.db')
+    conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
     c.execute('SELECT * FROM users')
     users = c.fetchall()
@@ -99,5 +95,5 @@ def not_found(e):
     return render_template('404.html'), 404
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=10000)
-
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=port)
